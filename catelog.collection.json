@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "3bb7eebe-2874-4063-9590-4d3bdac5590d",
+		"name": "catelog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saved Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "postman-token",
+						"value": "a34e547a-4dae-09a5-cd77-2910039177af"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\":1,\n  \"categoryName\": \"Child\",\n  \"description\": \"Child category\",\n  \"date\": \"2022-05-29T08:17:34.899Z\",\n  \"userName\": \"zafarimam123@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/add/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"add",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get category by CategoryName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/male",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"male"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/update/category/oldcategoryname/male/newcategoryname/child",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"update",
+						"category",
+						"oldcategoryname",
+						"male",
+						"newcategoryname",
+						"child"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete category",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/delete/category/categoryname/male",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"delete",
+						"category",
+						"categoryname",
+						"male"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrive category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/deleted/category/male",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"deleted",
+						"category",
+						"male"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

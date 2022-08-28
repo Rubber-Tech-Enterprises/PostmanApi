@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "16f9b7c9-79b6-4317-8d6a-10dc327b5813",
+		"name": "subsubCategory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9091/catelog/v1/add/subsubcategory/categoryname/child/subsubcategoryname/jean",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"subSubCategoryName\": \"Formal Jeans\",\n  \"date\": \"2022-07-02T15:24:20.956Z\",\n  \"description\": \"formal jeans subsubcategory\",\n  \"userName\": \"zafarimam329@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/add/subsubcategory/categoryname/child/subsubcategoryname/jean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"add",
+						"subsubcategory",
+						"categoryname",
+						"child",
+						"subsubcategoryname",
+						"jean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all subsubcategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/all/subsubcategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"all",
+						"subsubcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get subsubcategory by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/categor/child/subcategory/jean/subsubcategory/formal%20jeans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"categor",
+						"child",
+						"subcategory",
+						"jean",
+						"subsubcategory",
+						"formal%20jeans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update subsubcategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/update/category/child/subcategoryname/jean/oldsubsubcategoryname/formal%20jeans/subsubcategoory/caual%20jeans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"update",
+						"category",
+						"child",
+						"subcategoryname",
+						"jean",
+						"oldsubsubcategoryname",
+						"formal%20jeans",
+						"subsubcategoory",
+						"caual%20jeans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletesubsubcategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/delete/category/child/subcategory/jean/subsubcategory/caual%20jeans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"delete",
+						"category",
+						"child",
+						"subcategory",
+						"jean",
+						"subsubcategory",
+						"caual%20jeans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "b0ec2186-1d9e-4643-9696-c4aa3d1a5804",
+		"name": "softsubsubcategory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrivesubsubcategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/retrive/categoryname/men/subcategoryname/pant/subsubcategory/causal%20pant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"retrive",
+						"categoryname",
+						"men",
+						"subcategoryname",
+						"pant",
+						"subsubcategory",
+						"causal%20pant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

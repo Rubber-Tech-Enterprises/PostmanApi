@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "dc7ddb5a-1c50-497c-abca-79c91ac7f7cb",
+		"name": "softcategory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrivecategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/retrive/category/men",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"retrive",
+						"category",
+						"men"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

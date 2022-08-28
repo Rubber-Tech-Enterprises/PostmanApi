@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "fbcb0e35-4d9e-4b65-8242-046eec7871cf",
+		"name": "softsubcategory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrivesubcategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9091/catelog/v1/get/retrive/category/men/subcategory/pant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"catelog",
+						"v1",
+						"get",
+						"retrive",
+						"category",
+						"men",
+						"subcategory",
+						"pant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
