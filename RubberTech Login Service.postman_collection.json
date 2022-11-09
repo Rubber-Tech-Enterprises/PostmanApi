@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "1933abf0-a101-4641-be34-fe737b47c763",
+		"name": "RubberTech Login Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9093/users/v1/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get username from token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/user/username/token?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2NzY3ODA0MiwiaWF0IjoxNjY3NjYwMDQyfQ.Y1zuArj1xzBtuy6-7nsBvThgbjpHKnySpk8DW1SklQPC5dnydAd0lyTsGu2zd0cbLlNK53OIyl1NsHXNPpcp4w",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"user",
+						"username",
+						"token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2NzY3ODA0MiwiaWF0IjoxNjY3NjYwMDQyfQ.Y1zuArj1xzBtuy6-7nsBvThgbjpHKnySpk8DW1SklQPC5dnydAd0lyTsGu2zd0cbLlNK53OIyl1NsHXNPpcp4w"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user details by username",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/user/username/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"user",
+						"username",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegistration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fName\":\"zafar\",\r\n    \"LName\":\"imam\",\r\n    \"userid\":\"zafar329\",\r\n    \"password\":\"zafar329\",\r\n    \"confirmPassword\":\"zafar329\",\r\n    \"mobileNumber\":\"+917032871006\",\r\n    \"email\":\"zafarimam329@gmail.com\",\r\n    \"gendar\":\"Male\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9093/users/v1/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create token ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Nishi123\",\r\n    \"password\":\"singh123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9093/users/v1/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountnonexpired",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzc3MzYxMiwiaWF0IjoxNjY3NzU1NjEyfQ.NZf8BqlRmEHFOhovXQ5f_lyR6wkSnpmn9jpheHwXEg7bMHCLden2JzkKD1gsuxOE3oC2e1mIYgX7jR3Gs5X2Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/update/user/accountnonexpired?username=zafar329&accountNonExpired=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"update",
+						"user",
+						"accountnonexpired"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "accountNonExpired",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountNonLocked",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzc3MzYxMiwiaWF0IjoxNjY3NzU1NjEyfQ.NZf8BqlRmEHFOhovXQ5f_lyR6wkSnpmn9jpheHwXEg7bMHCLden2JzkKD1gsuxOE3oC2e1mIYgX7jR3Gs5X2Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/update/user/accountNonLocked?username=zafar329&accountNonLocked=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"update",
+						"user",
+						"accountNonLocked"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "accountNonLocked",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "credentialsNonExpired",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzc3MzYxMiwiaWF0IjoxNjY3NzU1NjEyfQ.NZf8BqlRmEHFOhovXQ5f_lyR6wkSnpmn9jpheHwXEg7bMHCLden2JzkKD1gsuxOE3oC2e1mIYgX7jR3Gs5X2Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/update/user/credentialsNonExpired?username=zafar329&credentialsNonExpired=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"update",
+						"user",
+						"credentialsNonExpired"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "credentialsNonExpired",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accountEnable",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzc3MzYxMiwiaWF0IjoxNjY3NzU1NjEyfQ.NZf8BqlRmEHFOhovXQ5f_lyR6wkSnpmn9jpheHwXEg7bMHCLden2JzkKD1gsuxOE3oC2e1mIYgX7jR3Gs5X2Pw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/update/user/accountEnable?username=zafar329&accountEnable=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"update",
+						"user",
+						"accountEnable"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "accountEnable",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzk5MDE1MSwiaWF0IjoxNjY3OTcyMTUxfQ.xErEmZfXxc0cZQ2XA1M1p74nQFryBY9UWBxobo_VPIe1fvMeUiWddv4Eygx6dfkuw1CjugkICrI8aUzDRdiJmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/update/user/role?username=zafar329&oldUserRole=USER&newUserRole=ADMIN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"update",
+						"user",
+						"role"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "oldUserRole",
+							"value": "USER"
+						},
+						{
+							"key": "newUserRole",
+							"value": "ADMIN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove user Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzk5MDE1MSwiaWF0IjoxNjY3OTcyMTUxfQ.xErEmZfXxc0cZQ2XA1M1p74nQFryBY9UWBxobo_VPIe1fvMeUiWddv4Eygx6dfkuw1CjugkICrI8aUzDRdiJmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/remove/user/role?username=zafar329&userRole=ADMIN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"remove",
+						"user",
+						"role"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "oldUserRole",
+							"value": "USER",
+							"disabled": true
+						},
+						{
+							"key": "userRole",
+							"value": "ADMIN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2Nzk5MDE1MSwiaWF0IjoxNjY3OTcyMTUxfQ.xErEmZfXxc0cZQ2XA1M1p74nQFryBY9UWBxobo_VPIe1fvMeUiWddv4Eygx6dfkuw1CjugkICrI8aUzDRdiJmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9093/users/v1/add/user/role?username=zafar329&userrole=ADMIN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"users",
+						"v1",
+						"add",
+						"user",
+						"role"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zafar329"
+						},
+						{
+							"key": "oldUserRole",
+							"value": "USER",
+							"disabled": true
+						},
+						{
+							"key": "userrole",
+							"value": "ADMIN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
